@@ -101,9 +101,6 @@ lz4 -dc $conda_tar | tar xf - --owner root --group root --no-same-owner && rm $c
 sudo scp -r conda/* /opt/conda/ && sudo rm -rf conda
 [[ -d /opt/conda/bin ]] || { echo "conda directory /opt/conda/bin does not exist after install" ; exit 1 ; }
 
-export http_proxy=http://${PROXY_HOST}:3128
-export https_proxy=http://${PROXY_HOST}:3128
-
 packages="pandas google-cloud-storage google-cloud-pubsub redis matplotlib more-itertools numpy pandasql setuptools psycopg2-binary regex scipy statsmodels pandas-gbq"
 
 /opt/conda/envs/python3/bin/pip install --index-url https://pypi.org/api/pypi/  --no-cache-dir --trusted-host=pypi.org --upgrade $packages
