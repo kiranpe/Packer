@@ -45,7 +45,7 @@ locals {
     goog-dataproc-version = "1-5-56-debian10"
     componenet            = "dataproc-custom-spark-image"
     environment           = "dev"
-    owner                 = "dma"
+    owner                 = "kiran"
   }
 }
 
